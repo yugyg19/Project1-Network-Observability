@@ -1,0 +1,8 @@
+# Secrets and credentials
+.env
+*.key
+*.pem
+*password*
+
+# Open5GS local environment
+scenario-b/deployment/docker_open5gs/.env

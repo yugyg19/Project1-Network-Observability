@@ -1,0 +1,10 @@
+Condition,Metric,Value,Unit
+Baseline,ICMP Average RTT,0.630,ms
+50ms Delay,ICMP Average RTT,50.433,ms
+1% Packet Loss,ICMP Packet Loss,2,percent
+20Mbps Rate Limit,TCP Throughput,19.1,Mbit/s
+Baseline,TCP Throughput,29200,Mbit/s
+Baseline,UDP Throughput,10.0,Mbit/s
+Baseline,UDP Jitter,0.134,ms
+Baseline,UDP Packet Loss,0,percent
+Baseline,HTTP Response Time,9.616,ms

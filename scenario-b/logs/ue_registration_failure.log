@@ -1,0 +1,452 @@
+Deploying component: 'ueransim-ue'
+UERANSIM v3.2.6
+[?2004h]0;root@1bb915fd6d78: /UERANSIM/buildroot@1bb915fd6d78:/UERANSIM/build# [2026-09-23 07:45:56.653] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PLMN-SEARCH]
+[2026-09-23 07:45:56.658] [rrc] [[36mdebug[m] New signal detected for cell[1], total [1] cells in coverage
+[2026-09-23 07:45:58.855] [nas] [[31m[1merror[m] PLMN selection failure, no cells in coverage
+[2026-09-23 07:46:01.057] [nas] [[31m[1merror[m] PLMN selection failure, no cells in coverage
+[2026-09-23 07:46:01.655] [rrc] [[33m[1mwarning[m] Acceptable cell selection failed in [1] cells. [1] no SI, [0] reserved, [0] barred, ftai [0]
+[2026-09-23 07:46:01.655] [rrc] [[31m[1merror[m] Cell selection failure, no suitable or acceptable cell found
+[2026-09-23 07:46:02.158] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/NO-CELL-AVAILABLE]
+[2026-09-23 07:46:05.182] [nas] [[32minfo[m] Selected plmn[001/01]
+[2026-09-23 07:46:05.182] [rrc] [[32minfo[m] Selected cell plmn[001/01] tac[1] category[SUITABLE]
+[2026-09-23 07:46:05.182] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 07:46:05.182] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/NORMAL-SERVICE]
+[2026-09-23 07:46:05.182] [nas] [[36mdebug[m] Initial registration required due to [MM-DEREG-NORMAL-SERVICE]
+[2026-09-23 07:46:05.182] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 07:46:05.182] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 07:46:05.182] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 07:46:05.182] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 07:46:05.183] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 07:46:05.183] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 07:46:05.183] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 07:46:05.351] [nas] [[31m[1merror[m] Initial Registration failed [FIVEG_SERVICES_NOT_ALLOWED]
+[2026-09-23 07:46:05.351] [nas] [[32minfo[m] UE switches to state [5U3-ROAMING-NOT-ALLOWED]
+[2026-09-23 07:46:05.351] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 07:46:05.351] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/NO-SUPI]
+[2026-09-23 07:46:05.351] [rrc] [[36mdebug[m] RRC Release received
+[2026-09-23 07:46:05.351] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+Deploying component: 'ueransim-ue'
+UERANSIM v3.2.6
+[?2004h[2026-09-23 07:57:24.372] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PLMN-SEARCH]
+]0;root@1bb915fd6d78: /UERANSIM/buildroot@1bb915fd6d78:/UERANSIM/build# [2026-09-23 07:57:24.373] [rrc] [[36mdebug[m] New signal detected for cell[1], total [1] cells in coverage
+[2026-09-23 07:57:24.375] [nas] [[32minfo[m] Selected plmn[001/01]
+[2026-09-23 07:57:26.872] [rrc] [[32minfo[m] Selected cell plmn[001/01] tac[1] category[SUITABLE]
+[2026-09-23 07:57:26.872] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 07:57:26.873] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/NORMAL-SERVICE]
+[2026-09-23 07:57:26.873] [nas] [[36mdebug[m] Initial registration required due to [MM-DEREG-NORMAL-SERVICE]
+[2026-09-23 07:57:26.873] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 07:57:26.873] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 07:57:26.879] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 07:57:26.879] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 07:57:26.882] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 07:57:26.882] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 07:57:26.882] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 07:57:26.963] [nas] [[36mdebug[m] Authentication Request received
+[2026-09-23 07:57:26.963] [nas] [[36mdebug[m] Sending Authentication Failure due to SQN out of range
+[2026-09-23 07:57:26.973] [nas] [[31m[1merror[m] Initial Registration failed [UNSPECIFIED_PROTOCOL_ERROR]
+[2026-09-23 07:57:26.973] [nas] [[36mdebug[m] Handling Registration Reject abnormal case
+[2026-09-23 07:57:26.973] [nas] [[32minfo[m] UE switches to state [5U2-NOT-UPDATED]
+[2026-09-23 07:57:26.973] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-23 07:57:26.974] [rrc] [[36mdebug[m] RRC Release received
+[2026-09-23 07:57:26.974] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-23 07:57:42.389] [nas] [[36mdebug[m] NAS timer[3520] expired [1]
+[2026-09-23 07:57:42.389] [nas] [[31m[1merror[m] Network failing the authentication check
+Deploying component: 'ueransim-ue'
+UERANSIM v3.2.6
+[2026-09-23 07:58:39.730] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PLMN-SEARCH]
+[2026-09-23 07:58:39.732] [rrc] [[36mdebug[m] New signal detected for cell[1], total [1] cells in coverage
+[?2004h]0;root@1bb915fd6d78: /UERANSIM/buildroot@1bb915fd6d78:/UERANSIM/build# [2026-09-23 07:58:39.733] [nas] [[32minfo[m] Selected plmn[001/01]
+[2026-09-23 07:58:39.733] [rrc] [[32minfo[m] Selected cell plmn[001/01] tac[1] category[SUITABLE]
+[2026-09-23 07:58:39.733] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 07:58:39.733] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/NORMAL-SERVICE]
+[2026-09-23 07:58:39.733] [nas] [[36mdebug[m] Initial registration required due to [MM-DEREG-NORMAL-SERVICE]
+[2026-09-23 07:58:39.733] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 07:58:39.733] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 07:58:39.733] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 07:58:39.734] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 07:58:39.734] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 07:58:39.734] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 07:58:39.734] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 07:58:39.742] [nas] [[36mdebug[m] Authentication Request received
+[2026-09-23 07:58:39.742] [nas] [[36mdebug[m] Sending Authentication Failure due to SQN out of range
+[2026-09-23 07:58:39.747] [rrc] [[36mdebug[m] RRC Release received
+[2026-09-23 07:58:39.747] [nas] [[31m[1merror[m] Initial Registration failed [UNSPECIFIED_PROTOCOL_ERROR]
+[2026-09-23 07:58:39.747] [nas] [[36mdebug[m] Handling Registration Reject abnormal case
+[2026-09-23 07:58:39.747] [nas] [[32minfo[m] UE switches to state [5U2-NOT-UPDATED]
+[2026-09-23 07:58:39.747] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-23 07:58:39.747] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-23 07:58:54.747] [nas] [[36mdebug[m] NAS timer[3520] expired [1]
+[2026-09-23 07:58:54.747] [nas] [[31m[1merror[m] Network failing the authentication check
+Deploying component: 'ueransim-ue'
+UERANSIM v3.2.6
+[?2004h]0;root@1bb915fd6d78: /UERANSIM/buildroot@1bb915fd6d78:/UERANSIM/build# [2026-09-23 08:02:47.915] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PLMN-SEARCH]
+[2026-09-23 08:02:47.916] [rrc] [[36mdebug[m] New signal detected for cell[1], total [1] cells in coverage
+[2026-09-23 08:02:47.917] [nas] [[32minfo[m] Selected plmn[001/01]
+[2026-09-23 08:02:47.917] [rrc] [[32minfo[m] Selected cell plmn[001/01] tac[1] category[SUITABLE]
+[2026-09-23 08:02:47.917] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 08:02:47.917] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/NORMAL-SERVICE]
+[2026-09-23 08:02:47.917] [nas] [[36mdebug[m] Initial registration required due to [MM-DEREG-NORMAL-SERVICE]
+[2026-09-23 08:02:47.917] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 08:02:47.917] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 08:02:47.918] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 08:02:47.918] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 08:02:47.919] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 08:02:47.919] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 08:02:47.919] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 08:02:47.932] [nas] [[36mdebug[m] Authentication Request received
+[2026-09-23 08:02:47.932] [nas] [[36mdebug[m] Sending Authentication Failure due to SQN out of range
+[2026-09-23 08:02:47.937] [rrc] [[36mdebug[m] RRC Release received
+[2026-09-23 08:02:47.937] [nas] [[31m[1merror[m] Initial Registration failed [UNSPECIFIED_PROTOCOL_ERROR]
+[2026-09-23 08:02:47.937] [nas] [[36mdebug[m] Handling Registration Reject abnormal case
+[2026-09-23 08:02:47.937] [nas] [[32minfo[m] UE switches to state [5U2-NOT-UPDATED]
+[2026-09-23 08:02:47.937] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-23 08:02:47.937] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-23 08:03:03.931] [nas] [[36mdebug[m] NAS timer[3520] expired [1]
+[2026-09-23 08:03:03.931] [nas] [[31m[1merror[m] Network failing the authentication check
+Deploying component: 'ueransim-ue'
+[?2004h]0;root@1bb915fd6d78: /UERANSIM/buildroot@1bb915fd6d78:/UERANSIM/build# UERANSIM v3.2.6
+[2026-09-23 08:11:47.812] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PLMN-SEARCH]
+[2026-09-23 08:11:47.814] [rrc] [[36mdebug[m] New signal detected for cell[1], total [1] cells in coverage
+[2026-09-23 08:11:47.814] [nas] [[32minfo[m] Selected plmn[001/01]
+[2026-09-23 08:11:50.313] [rrc] [[32minfo[m] Selected cell plmn[001/01] tac[1] category[SUITABLE]
+[2026-09-23 08:11:50.313] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 08:11:50.313] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/NORMAL-SERVICE]
+[2026-09-23 08:11:50.313] [nas] [[36mdebug[m] Initial registration required due to [MM-DEREG-NORMAL-SERVICE]
+[2026-09-23 08:11:50.313] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 08:11:50.313] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 08:11:50.314] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 08:11:50.315] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 08:11:50.316] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 08:11:50.316] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 08:11:50.316] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 08:12:05.830] [nas] [[36mdebug[m] NAS timer[3510] expired [1]
+[2026-09-23 08:12:05.830] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 08:12:05.831] [nas] [[32minfo[m] UE switches to state [5U2-NOT-UPDATED]
+[2026-09-23 08:12:05.831] [nas] [[32minfo[m] Performing local release of NAS connection
+[2026-09-23 08:12:05.831] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-23 08:12:05.831] [rrc] [[32minfo[m] UE switches to state [RRC-IDLE]
+[2026-09-23 08:12:05.832] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-23 08:12:15.840] [nas] [[36mdebug[m] NAS timer[3511] expired [1]
+[2026-09-23 08:12:15.840] [nas] [[36mdebug[m] Initial registration required due to [T3511-EXPIRY-IN-ATT-REG]
+[2026-09-23 08:12:15.840] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 08:12:15.840] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 08:12:15.840] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 08:12:15.840] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 08:12:15.841] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 08:12:15.841] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 08:12:15.841] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 08:12:30.855] [nas] [[36mdebug[m] NAS timer[3510] expired [1]
+[2026-09-23 08:12:30.855] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 08:12:30.855] [nas] [[32minfo[m] Performing local release of NAS connection
+[2026-09-23 08:12:30.855] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-23 08:12:30.855] [rrc] [[32minfo[m] UE switches to state [RRC-IDLE]
+[2026-09-23 08:12:30.855] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-23 08:12:40.865] [nas] [[36mdebug[m] NAS timer[3511] expired [1]
+[2026-09-23 08:12:40.865] [nas] [[36mdebug[m] Initial registration required due to [T3511-EXPIRY-IN-ATT-REG]
+[2026-09-23 08:12:40.865] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 08:12:40.865] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 08:12:40.865] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 08:12:40.865] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 08:12:40.866] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 08:12:40.866] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 08:12:40.866] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 08:12:55.880] [nas] [[36mdebug[m] NAS timer[3510] expired [1]
+[2026-09-23 08:12:55.880] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 08:12:55.880] [nas] [[32minfo[m] Performing local release of NAS connection
+[2026-09-23 08:12:55.880] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-23 08:12:55.880] [rrc] [[32minfo[m] UE switches to state [RRC-IDLE]
+[2026-09-23 08:12:55.880] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-23 08:13:05.890] [nas] [[36mdebug[m] NAS timer[3511] expired [1]
+[2026-09-23 08:13:05.890] [nas] [[36mdebug[m] Initial registration required due to [T3511-EXPIRY-IN-ATT-REG]
+[2026-09-23 08:13:05.890] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 08:13:05.890] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 08:13:05.890] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 08:13:05.890] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 08:13:05.891] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 08:13:05.891] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 08:13:05.891] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 08:13:20.905] [nas] [[36mdebug[m] NAS timer[3510] expired [1]
+[2026-09-23 08:13:20.905] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 08:13:20.905] [nas] [[32minfo[m] Performing local release of NAS connection
+[2026-09-23 08:13:20.905] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-23 08:13:20.905] [rrc] [[32minfo[m] UE switches to state [RRC-IDLE]
+[2026-09-23 08:13:20.905] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-23 08:13:30.915] [nas] [[36mdebug[m] NAS timer[3511] expired [1]
+[2026-09-23 08:13:30.915] [nas] [[36mdebug[m] Initial registration required due to [T3511-EXPIRY-IN-ATT-REG]
+[2026-09-23 08:13:30.915] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 08:13:30.915] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 08:13:30.915] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 08:13:30.915] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 08:13:30.916] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 08:13:30.916] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 08:13:30.916] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 08:13:45.930] [nas] [[36mdebug[m] NAS timer[3510] expired [1]
+[2026-09-23 08:13:45.930] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 08:13:45.930] [nas] [[32minfo[m] Performing local release of NAS connection
+[2026-09-23 08:13:45.930] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-23 08:13:45.930] [rrc] [[32minfo[m] UE switches to state [RRC-IDLE]
+[2026-09-23 08:13:45.930] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+Deploying component: 'ueransim-ue'
+[?2004h]0;root@1bb915fd6d78: /UERANSIM/buildroot@1bb915fd6d78:/UERANSIM/build# UERANSIM v3.2.6
+[2026-09-23 08:24:56.555] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PLMN-SEARCH]
+[2026-09-23 08:24:56.555] [rrc] [[36mdebug[m] New signal detected for cell[1], total [1] cells in coverage
+[2026-09-23 08:24:56.557] [nas] [[32minfo[m] Selected plmn[001/01]
+[2026-09-23 08:24:59.055] [rrc] [[32minfo[m] Selected cell plmn[001/01] tac[1] category[SUITABLE]
+[2026-09-23 08:24:59.055] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 08:24:59.055] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/NORMAL-SERVICE]
+[2026-09-23 08:24:59.056] [nas] [[36mdebug[m] Initial registration required due to [MM-DEREG-NORMAL-SERVICE]
+[2026-09-23 08:24:59.058] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 08:24:59.058] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 08:24:59.060] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 08:24:59.060] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 08:24:59.062] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 08:24:59.062] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 08:24:59.063] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 08:25:14.572] [nas] [[36mdebug[m] NAS timer[3510] expired [1]
+[2026-09-23 08:25:14.572] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 08:25:14.572] [nas] [[32minfo[m] UE switches to state [5U2-NOT-UPDATED]
+[2026-09-23 08:25:14.572] [nas] [[32minfo[m] Performing local release of NAS connection
+[2026-09-23 08:25:14.572] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-23 08:25:14.572] [rrc] [[32minfo[m] UE switches to state [RRC-IDLE]
+[2026-09-23 08:25:14.572] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-23 08:25:24.582] [nas] [[36mdebug[m] NAS timer[3511] expired [1]
+[2026-09-23 08:25:24.582] [nas] [[36mdebug[m] Initial registration required due to [T3511-EXPIRY-IN-ATT-REG]
+[2026-09-23 08:25:24.582] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 08:25:24.582] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 08:25:24.582] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 08:25:24.582] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 08:25:24.583] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 08:25:24.583] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 08:25:24.583] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 08:25:39.597] [nas] [[36mdebug[m] NAS timer[3510] expired [1]
+[2026-09-23 08:25:39.597] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 08:25:39.597] [nas] [[32minfo[m] Performing local release of NAS connection
+[2026-09-23 08:25:39.597] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-23 08:25:39.597] [rrc] [[32minfo[m] UE switches to state [RRC-IDLE]
+[2026-09-23 08:25:39.597] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-23 08:25:49.607] [nas] [[36mdebug[m] NAS timer[3511] expired [1]
+[2026-09-23 08:25:49.607] [nas] [[36mdebug[m] Initial registration required due to [T3511-EXPIRY-IN-ATT-REG]
+[2026-09-23 08:25:49.607] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 08:25:49.607] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 08:25:49.607] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 08:25:49.607] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 08:25:49.608] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 08:25:49.608] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 08:25:49.608] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 08:26:04.622] [nas] [[36mdebug[m] NAS timer[3510] expired [1]
+[2026-09-23 08:26:04.622] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 08:26:04.622] [nas] [[32minfo[m] Performing local release of NAS connection
+[2026-09-23 08:26:04.622] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-23 08:26:04.622] [rrc] [[32minfo[m] UE switches to state [RRC-IDLE]
+[2026-09-23 08:26:04.622] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-23 08:26:14.633] [nas] [[36mdebug[m] NAS timer[3511] expired [1]
+[2026-09-23 08:26:14.634] [nas] [[36mdebug[m] Initial registration required due to [T3511-EXPIRY-IN-ATT-REG]
+[2026-09-23 08:26:14.636] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 08:26:14.636] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 08:26:14.636] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 08:26:14.636] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 08:26:14.638] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 08:26:14.638] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 08:26:14.638] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 08:26:29.647] [nas] [[36mdebug[m] NAS timer[3510] expired [1]
+[2026-09-23 08:26:29.647] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 08:26:29.647] [nas] [[32minfo[m] Performing local release of NAS connection
+[2026-09-23 08:26:29.647] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-23 08:26:29.647] [rrc] [[32minfo[m] UE switches to state [RRC-IDLE]
+[2026-09-23 08:26:29.647] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-23 08:26:39.657] [nas] [[36mdebug[m] NAS timer[3511] expired [1]
+[2026-09-23 08:26:39.657] [nas] [[36mdebug[m] Initial registration required due to [T3511-EXPIRY-IN-ATT-REG]
+[2026-09-23 08:26:39.657] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 08:26:39.657] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 08:26:39.657] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 08:26:39.657] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 08:26:39.659] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 08:26:39.659] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 08:26:39.659] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 08:26:54.672] [nas] [[36mdebug[m] NAS timer[3510] expired [1]
+[2026-09-23 08:26:54.672] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 08:26:54.672] [nas] [[32minfo[m] Performing local release of NAS connection
+[2026-09-23 08:26:54.672] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-23 08:26:54.672] [rrc] [[32minfo[m] UE switches to state [RRC-IDLE]
+[2026-09-23 08:26:54.672] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-23 08:27:38.988] [rrc] [[36mdebug[m] New signal detected for cell[2], total [2] cells in coverage
+[2026-09-23 08:27:39.119] [rrc] [[32minfo[m] Selected cell plmn[001/01] tac[1] category[SUITABLE]
+[2026-09-23 08:27:39.119] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 08:27:39.119] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/NORMAL-SERVICE]
+[2026-09-23 08:27:39.119] [nas] [[36mdebug[m] Initial registration required due to [MM-DEREG-NORMAL-SERVICE]
+[2026-09-23 08:27:39.122] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 08:27:39.122] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 08:27:39.123] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 08:27:39.123] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 08:27:39.124] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 08:27:39.124] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 08:27:39.124] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 08:27:39.176] [nas] [[36mdebug[m] Authentication Request received
+[2026-09-23 08:27:39.177] [nas] [[36mdebug[m] Sending Authentication Failure due to SQN out of range
+[2026-09-23 08:27:39.188] [rrc] [[36mdebug[m] RRC Release received
+[2026-09-23 08:27:39.188] [nas] [[31m[1merror[m] Initial Registration failed [UNSPECIFIED_PROTOCOL_ERROR]
+[2026-09-23 08:27:39.189] [nas] [[36mdebug[m] Handling Registration Reject abnormal case
+[2026-09-23 08:27:39.189] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-23 08:27:39.189] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-23 08:27:39.990] [rrc] [[36mdebug[m] Signal lost for cell[1], total [1] cells in coverage
+Deploying component: 'ueransim-ue'
+UERANSIM v3.2.6
+[2026-09-23 08:27:55.035] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PLMN-SEARCH]
+[?2004h]0;root@1bb915fd6d78: /UERANSIM/buildroot@1bb915fd6d78:/UERANSIM/build# [2026-09-23 08:27:55.037] [rrc] [[36mdebug[m] New signal detected for cell[1], total [1] cells in coverage
+[2026-09-23 08:27:55.038] [nas] [[32minfo[m] Selected plmn[001/01]
+[2026-09-23 08:27:55.038] [rrc] [[32minfo[m] Selected cell plmn[001/01] tac[1] category[SUITABLE]
+[2026-09-23 08:27:55.038] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 08:27:55.038] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/NORMAL-SERVICE]
+[2026-09-23 08:27:55.038] [nas] [[36mdebug[m] Initial registration required due to [MM-DEREG-NORMAL-SERVICE]
+[2026-09-23 08:27:55.038] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 08:27:55.038] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 08:27:55.038] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 08:27:55.038] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 08:27:55.039] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 08:27:55.039] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 08:27:55.039] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 08:27:55.046] [nas] [[36mdebug[m] Authentication Request received
+[2026-09-23 08:27:55.046] [nas] [[36mdebug[m] Sending Authentication Failure due to SQN out of range
+[2026-09-23 08:27:55.049] [rrc] [[36mdebug[m] RRC Release received
+[2026-09-23 08:27:55.049] [nas] [[31m[1merror[m] Initial Registration failed [UNSPECIFIED_PROTOCOL_ERROR]
+[2026-09-23 08:27:55.049] [nas] [[36mdebug[m] Handling Registration Reject abnormal case
+[2026-09-23 08:27:55.049] [nas] [[32minfo[m] UE switches to state [5U2-NOT-UPDATED]
+[2026-09-23 08:27:55.049] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-23 08:27:55.049] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-23 08:28:10.050] [nas] [[36mdebug[m] NAS timer[3520] expired [1]
+[2026-09-23 08:28:10.050] [nas] [[31m[1merror[m] Network failing the authentication check
+Deploying component: 'ueransim-ue'
+UERANSIM v3.2.6
+[?2004h]0;root@1bb915fd6d78: /UERANSIM/buildroot@1bb915fd6d78:/UERANSIM/build# [2026-09-23 08:29:27.972] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PLMN-SEARCH]
+[2026-09-23 08:29:27.972] [rrc] [[36mdebug[m] New signal detected for cell[1], total [1] cells in coverage
+[2026-09-23 08:29:27.973] [nas] [[32minfo[m] Selected plmn[001/01]
+[2026-09-23 08:29:27.973] [rrc] [[32minfo[m] Selected cell plmn[001/01] tac[1] category[SUITABLE]
+[2026-09-23 08:29:27.973] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 08:29:27.973] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/NORMAL-SERVICE]
+[2026-09-23 08:29:27.973] [nas] [[36mdebug[m] Initial registration required due to [MM-DEREG-NORMAL-SERVICE]
+[2026-09-23 08:29:27.973] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 08:29:27.973] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 08:29:27.973] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 08:29:27.973] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 08:29:27.974] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 08:29:27.974] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 08:29:27.975] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 08:29:27.988] [nas] [[36mdebug[m] Authentication Request received
+[2026-09-23 08:29:27.988] [nas] [[36mdebug[m] Sending Authentication Failure due to SQN out of range
+[2026-09-23 08:29:27.992] [nas] [[31m[1merror[m] Initial Registration failed [UNSPECIFIED_PROTOCOL_ERROR]
+[2026-09-23 08:29:27.992] [nas] [[36mdebug[m] Handling Registration Reject abnormal case
+[2026-09-23 08:29:27.992] [nas] [[32minfo[m] UE switches to state [5U2-NOT-UPDATED]
+[2026-09-23 08:29:27.992] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-23 08:29:27.992] [rrc] [[36mdebug[m] RRC Release received
+[2026-09-23 08:29:27.992] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-23 08:29:43.987] [nas] [[36mdebug[m] NAS timer[3520] expired [1]
+[2026-09-23 08:29:43.987] [nas] [[31m[1merror[m] Network failing the authentication check
+Deploying component: 'ueransim-ue'
+UERANSIM v3.2.6
+[2026-09-23 08:34:17.396] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PLMN-SEARCH]
+[?2004h]0;root@1bb915fd6d78: /UERANSIM/buildroot@1bb915fd6d78:/UERANSIM/build# [2026-09-23 08:34:17.398] [rrc] [[36mdebug[m] New signal detected for cell[1], total [1] cells in coverage
+[2026-09-23 08:34:17.398] [nas] [[32minfo[m] Selected plmn[001/01]
+[2026-09-23 08:34:17.398] [rrc] [[32minfo[m] Selected cell plmn[001/01] tac[1] category[SUITABLE]
+[2026-09-23 08:34:17.398] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-23 08:34:17.398] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/NORMAL-SERVICE]
+[2026-09-23 08:34:17.398] [nas] [[36mdebug[m] Initial registration required due to [MM-DEREG-NORMAL-SERVICE]
+[2026-09-23 08:34:17.402] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-23 08:34:17.402] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-23 08:34:17.402] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-23 08:34:17.402] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-23 08:34:17.403] [rrc] [[32minfo[m] RRC connection established
+[2026-09-23 08:34:17.403] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-23 08:34:17.403] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-23 08:34:17.413] [nas] [[36mdebug[m] Authentication Request received
+[2026-09-23 08:34:17.413] [nas] [[36mdebug[m] Sending Authentication Failure due to SQN out of range
+[2026-09-23 08:34:17.416] [rrc] [[36mdebug[m] RRC Release received
+[2026-09-23 08:34:17.416] [nas] [[31m[1merror[m] Initial Registration failed [UNSPECIFIED_PROTOCOL_ERROR]
+[2026-09-23 08:34:17.416] [nas] [[36mdebug[m] Handling Registration Reject abnormal case
+[2026-09-23 08:34:17.416] [nas] [[32minfo[m] UE switches to state [5U2-NOT-UPDATED]
+[2026-09-23 08:34:17.416] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-23 08:34:17.416] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-23 08:34:33.412] [nas] [[36mdebug[m] NAS timer[3520] expired [1]
+[2026-09-23 08:34:33.412] [nas] [[31m[1merror[m] Network failing the authentication check
+Deploying component: 'ueransim-ue'
+[?2004h]0;root@1bb915fd6d78: /UERANSIM/buildroot@1bb915fd6d78:/UERANSIM/build# UERANSIM v3.2.6
+[2026-09-27 07:47:00.275] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PLMN-SEARCH]
+[2026-09-27 07:47:00.277] [rrc] [[36mdebug[m] New signal detected for cell[1], total [1] cells in coverage
+[2026-09-27 07:47:00.278] [nas] [[32minfo[m] Selected plmn[001/01]
+[2026-09-27 07:47:00.278] [rrc] [[32minfo[m] Selected cell plmn[001/01] tac[1] category[SUITABLE]
+[2026-09-27 07:47:00.278] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-27 07:47:00.278] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/NORMAL-SERVICE]
+[2026-09-27 07:47:00.278] [nas] [[36mdebug[m] Initial registration required due to [MM-DEREG-NORMAL-SERVICE]
+[2026-09-27 07:47:00.278] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-27 07:47:00.278] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-27 07:47:00.278] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-27 07:47:00.278] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-27 07:47:00.279] [rrc] [[32minfo[m] RRC connection established
+[2026-09-27 07:47:00.279] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-27 07:47:00.282] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-27 07:47:15.290] [nas] [[36mdebug[m] NAS timer[3510] expired [1]
+[2026-09-27 07:47:15.290] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-27 07:47:15.290] [nas] [[32minfo[m] UE switches to state [5U2-NOT-UPDATED]
+[2026-09-27 07:47:15.290] [nas] [[32minfo[m] Performing local release of NAS connection
+[2026-09-27 07:47:15.290] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-27 07:47:15.290] [rrc] [[32minfo[m] UE switches to state [RRC-IDLE]
+[2026-09-27 07:47:15.290] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-27 07:47:25.303] [nas] [[36mdebug[m] NAS timer[3511] expired [1]
+[2026-09-27 07:47:25.303] [nas] [[36mdebug[m] Initial registration required due to [T3511-EXPIRY-IN-ATT-REG]
+[2026-09-27 07:47:25.305] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-27 07:47:25.305] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-27 07:47:25.305] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-27 07:47:25.305] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-27 07:47:25.307] [rrc] [[32minfo[m] RRC connection established
+[2026-09-27 07:47:25.307] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-27 07:47:25.307] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-27 07:47:40.315] [nas] [[36mdebug[m] NAS timer[3510] expired [1]
+[2026-09-27 07:47:40.315] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-27 07:47:40.315] [nas] [[32minfo[m] Performing local release of NAS connection
+[2026-09-27 07:47:40.315] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-27 07:47:40.315] [rrc] [[32minfo[m] UE switches to state [RRC-IDLE]
+[2026-09-27 07:47:40.315] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-27 07:47:50.325] [nas] [[36mdebug[m] NAS timer[3511] expired [1]
+[2026-09-27 07:47:50.325] [nas] [[36mdebug[m] Initial registration required due to [T3511-EXPIRY-IN-ATT-REG]
+[2026-09-27 07:47:50.325] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-27 07:47:50.325] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-27 07:47:50.325] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-27 07:47:50.325] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-27 07:47:50.326] [rrc] [[32minfo[m] RRC connection established
+[2026-09-27 07:47:50.326] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-27 07:47:50.326] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-27 07:48:05.340] [nas] [[36mdebug[m] NAS timer[3510] expired [1]
+[2026-09-27 07:48:05.340] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-27 07:48:05.340] [nas] [[32minfo[m] Performing local release of NAS connection
+[2026-09-27 07:48:05.340] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-27 07:48:05.340] [rrc] [[32minfo[m] UE switches to state [RRC-IDLE]
+[2026-09-27 07:48:05.340] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-27 07:48:15.350] [nas] [[36mdebug[m] NAS timer[3511] expired [1]
+[2026-09-27 07:48:15.351] [nas] [[36mdebug[m] Initial registration required due to [T3511-EXPIRY-IN-ATT-REG]
+[2026-09-27 07:48:15.354] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-27 07:48:15.354] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-27 07:48:15.358] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-27 07:48:15.359] [rrc] [[32minfo[m] RRC connection established
+[2026-09-27 07:48:15.359] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-27 07:48:15.361] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-27 07:48:15.361] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-27 07:48:30.365] [nas] [[36mdebug[m] NAS timer[3510] expired [1]
+[2026-09-27 07:48:30.368] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-27 07:48:30.368] [nas] [[32minfo[m] Performing local release of NAS connection
+[2026-09-27 07:48:30.368] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-27 07:48:30.368] [rrc] [[32minfo[m] UE switches to state [RRC-IDLE]
+[2026-09-27 07:48:30.368] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
+[2026-09-27 07:48:40.375] [nas] [[36mdebug[m] NAS timer[3511] expired [1]
+[2026-09-27 07:48:40.375] [nas] [[36mdebug[m] Initial registration required due to [T3511-EXPIRY-IN-ATT-REG]
+[2026-09-27 07:48:40.375] [nas] [[36mdebug[m] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2026-09-27 07:48:40.375] [nas] [[36mdebug[m] Sending Initial Registration
+[2026-09-27 07:48:40.376] [nas] [[32minfo[m] UE switches to state [MM-REGISTER-INITIATED]
+[2026-09-27 07:48:40.376] [rrc] [[36mdebug[m] Sending RRC Setup Request
+[2026-09-27 07:48:40.376] [rrc] [[32minfo[m] RRC connection established
+[2026-09-27 07:48:40.376] [rrc] [[32minfo[m] UE switches to state [RRC-CONNECTED]
+[2026-09-27 07:48:40.376] [nas] [[32minfo[m] UE switches to state [CM-CONNECTED]
+[2026-09-27 07:48:55.390] [nas] [[36mdebug[m] NAS timer[3510] expired [1]
+[2026-09-27 07:48:55.390] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/PS]
+[2026-09-27 07:48:55.390] [nas] [[32minfo[m] Performing local release of NAS connection
+[2026-09-27 07:48:55.390] [nas] [[32minfo[m] UE switches to state [MM-DEREGISTERED/ATTEMPTING-REGISTRATION]
+[2026-09-27 07:48:55.390] [rrc] [[32minfo[m] UE switches to state [RRC-IDLE]
+[2026-09-27 07:48:55.390] [nas] [[32minfo[m] UE switches to state [CM-IDLE]
