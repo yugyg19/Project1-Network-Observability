@@ -53,11 +53,11 @@ The N6 Data Network uses 10.20.6.0/24.
 Nginx: 10.20.6.20
 iperf3: 10.20.6.21:5201
 
-Three N6 TCP baseline measurements produced an average throughput of 25.13 Gbit/s.
+Three complete UE user-plane TCP baseline measurements produced an average receiver throughput of 296.3 Mbit/s.
 
-A controlled 20 Mbps rate limitation produced 19.1 Mbit/s receiver throughput.
+A controlled 20 Mbps rate limitation produced 19.0 Mbit/s receiver throughput.
 
-The Scenario B UE registration/PDU-session procedure did not complete successfully. Therefore, the iperf3 results are reported as N6/Data Network measurements rather than complete UE-to-application 5G user-plane throughput.
+The final Scenario B deployment successfully completed UE registration and PDU session establishment. The TCP, UDP and HTTP measurements therefore use the complete UE → gNB → N3/GTP-U → UPF → N6 → Data Network path.
 
 ## Failure Diagnosis
 
@@ -107,8 +107,10 @@ report/technical_report.md
 
 ## Limitations
 
-Scenario B UE registration and PDU session establishment were not completed. Complete UE-originated N3/GTP-U traffic was therefore not demonstrated.
+The final quantitative dataset contains the completed experiments documented in this repository.
 
-Prometheus/Grafana monitoring was not active for the final quantitative measurements.
+Additional experiments suggested by the assignment, such as +50 ms delay, 1% packet loss, N3/N6 impairment comparison, and Prometheus/Grafana time-series correlation, were not used as final quantitative results unless corresponding measurements are present in the repository.
+
+Prometheus/Grafana was not the source of the final quantitative measurements.
 
 The detailed limitations and experimental discussion are documented in the technical report.

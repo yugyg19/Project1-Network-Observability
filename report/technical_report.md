@@ -130,19 +130,25 @@ This provides evidence for the N2 control-plane connection.
 
 ## 3.4 UE Registration and Failure Diagnosis
 
-The UE detected the configured cell and established an RRC connection.
+During the initial Scenario B deployment, UE registration encountered authentication and connectivity problems. The diagnostic logs included NAS timer expiry and SBI connectivity errors involving an endpoint at `172.22.0.35:7777`.
 
-The UE reached the CM-CONNECTED state and sent an Initial Registration request.
+These events were treated as deployment troubleshooting evidence rather than the final state of the system.
 
-However, registration did not complete. NAS timer expiry occurred and the UE returned to the MM-DEREGISTERED state.
+The subscriber configuration and user-plane connectivity were subsequently corrected. The final UE logs showed:
 
-During diagnosis, AMF logs showed SBI connectivity problems involving an endpoint at `172.22.0.35:7777`, including `No route to host` and connection failures.
+- Authentication Request
+- Security Mode Command
+- Registration Accept
+- Registration Complete
+- `MM-REGISTERED/NORMAL-SERVICE`
+- PDU Session Establishment Request
+- PDU Session Establishment Accept
+- Successful PDU session establishment
+- `uesimtun0` with UE address `192.168.100.2`
 
-The relevant core-network services were subsequently restored, and AMF logs showed successful NF registration and an SBI endpoint at `172.22.0.12:7777`.
+The final state therefore provided a working UE-to-data-network user plane.
 
-The UE registration/PDU-session problem nevertheless remained unresolved during the final measurement stage.
-
-Therefore, the N6 performance measurements are not presented as complete UE-to-application 5G user-plane measurements.
+The earlier diagnostic logs are retained as failure-investigation evidence.
 
 ## 3.5 Packet Observation
 
@@ -152,29 +158,52 @@ Packet capture points were prepared for the required 5G interfaces.
 
 An N2 capture was configured for SCTP port 38412.
 
-The capture file was created, although no packets were collected during the final capture window.
-
-The earlier gNB log evidence provides the primary N2 verification.
+The gNB logs provided evidence of SCTP connection establishment, NG Setup Request, NG Setup Response, and successful NG Setup.
 
 ### N3 — GTP-U
 
 An N3 capture was configured for UDP port 2152.
 
-The capture file was created, but no GTP-U packets were observed during the capture window.
+The final capture successfully collected GTP-U traffic.
 
-This is consistent with the absence of a successful UE PDU session.
+Capture result:
+
+- 1,355 packets captured
+- 1,371 packets received by filter
+- 0 packets dropped
+
+TShark decoded GTP traffic carrying the UE-to-iperf3 performance traffic.
+
+The observed outer path was:
+
+`172.22.0.23 → 172.22.0.8`
+
+using UDP port `2152`.
+
+The inner traffic included:
+
+`192.168.100.2 → 10.20.6.21`
+
+This demonstrates the GTP-U encapsulation between the gNB and UPF.
 
 ### N4 — PFCP
 
 An N4 capture was configured for UDP port 8805.
 
-No PFCP packets were observed during the final capture window.
+No PFCP packets were collected during the final packet-capture window. The final quantitative measurements therefore use the verified UE user-plane traffic and N3/GTP-U evidence rather than claiming final N4 packet-level evidence.
 
 ### N6 — Data Network
 
-An N6 capture was configured for the data-network subnet.
+The N6 interface connects the UPF to the `10.20.6.0/24` data network.
 
-No UE-originated N6 traffic was observed because the UE user-plane session was not successfully established.
+The UPF used N6 address `10.20.6.2`.
+
+The application endpoints were:
+
+- Nginx: `10.20.6.20:80`
+- iperf3: `10.20.6.21:5201`
+
+UE-to-Nginx and UE-to-iperf3 traffic were successfully verified through the 5G user plane.
 
 ---
 
@@ -212,36 +241,50 @@ and successful TCP connectivity was verified.
 # 5. Scenario B Performance Measurements
 
 ## 5.1 Baseline
+Three complete UE user-plane TCP iperf3 baseline measurements were performed using the UE network namespace.
 
-Three TCP iperf3 baseline measurements were performed.
+| Run | Sender Throughput | Receiver Throughput | Retransmissions |
+|---|---:|---:|---:|
+| Baseline 1 | 264 Mbit/s | 264 Mbit/s | 368 |
+| Baseline 2 | 310 Mbit/s | 309 Mbit/s | 395 |
+| Baseline 3 | 317 Mbit/s | 316 Mbit/s | 380 |
+| Average | 297.0 Mbit/s | 296.3 Mbit/s | 381 |
 
-| Run | Receiver Throughput | Retransmissions |
-|---|---:|---:|
-| Baseline 1 | 25.2 Gbit/s | 4,088 |
-| Baseline 2 | 24.0 Gbit/s | 1,953 |
-| Baseline 3 | 26.2 Gbit/s | 945 |
+The average receiver throughput was:
 
-The average baseline throughput was:
+**296.3 Mbit/s**
 
-**25.13 Gbit/s (25,133.33 Mbps)**
+The measurement used the complete user-plane path:
 
-These measurements represent the N6/Data Network path between the test client and iperf3 server.
+**UE → gNB → N3/GTP-U → UPF → N6 → iperf3**
 
-They are not claimed as complete UE-to-5G-user-plane throughput because the UE PDU session was not successfully established.
+The UE-side source address was `192.168.100.2` and the iperf3 server was `10.20.6.21:5201`.
+
 
 ## 5.2 Controlled 20 Mbps Rate Limitation
 
-A controlled 20 Mbps rate limitation was applied to the iperf3 server's outgoing interface and tested using reverse iperf3 mode.
+A controlled 20 Mbit/s traffic rate limitation was applied to the UPF N6 interface `eth1` using Linux traffic control.
 
-| Condition | Sender | Receiver |
-|---|---:|---:|
-| 20 Mbps rate limit | 19.7 Mbit/s | 19.1 Mbit/s |
+Configuration:
 
-The measured receiver throughput of **19.1 Mbit/s** was close to the configured 20 Mbps target.
+```text
+tc qdisc add dev eth1 root tbf rate 20mbit burst 32kbit latency 400ms
+```
 
-Compared with the 25,133.33 Mbps baseline average, the measured throughput reduction was approximately:
+Three 10-second TCP repetitions were performed through the complete UE user-plane path.
 
-**99.92%**
+| Run | Sender | Receiver | Retransmissions |
+|---|---:|---:|---:|
+| 1 | 21.3 Mbit/s | 19.0 Mbit/s | 36 |
+| 2 | 22.2 Mbit/s | 19.0 Mbit/s | 37 |
+| 3 | 22.1 Mbit/s | 19.0 Mbit/s | 37 |
+| Average | 21.87 Mbit/s | 19.0 Mbit/s | 36.67 |
+
+The baseline receiver throughput was **296.3 Mbit/s**.
+
+The controlled condition reduced receiver throughput to **19.0 Mbit/s**, corresponding to an approximately **93.6% reduction** relative to the baseline.
+
+The rate limiter was removed after the experiment and the interface returned to its normal condition.
 
 ---
 
@@ -277,13 +320,22 @@ This is documented as a project limitation.
 
 # 8. Comparison and Discussion
 
-Scenario A provided a complete namespace-based network path with successful end-to-end application connectivity. It therefore allowed direct measurement of ICMP, TCP, UDP, and HTTP behavior together with controlled impairment experiments.
+Scenario A provided a complete namespace-based network path with successful end-to-end application connectivity. It allowed direct measurement of ICMP, TCP, UDP, and HTTP behavior together with controlled delay, packet-loss, and rate-limit experiments.
 
-Scenario B provided a more detailed 5G SA architecture. Open5GS and UERANSIM were deployed, the gNB successfully established N2 connectivity with the AMF, and an N6 Data Network was created and measured.
+Scenario B provided a software-based 5G SA architecture. Open5GS and UERANSIM were deployed, the gNB successfully established N2 connectivity with the AMF, UE registration and PDU session establishment were completed, and the N6 Data Network was created and measured.
 
-However, the Scenario B UE registration/PDU-session problem prevented complete UE-to-application user-plane measurements.
+The final Scenario B performance measurements used the complete user-plane path:
 
-Therefore, the Scenario B performance results are explicitly presented as N6/Data Network measurements rather than complete 5G UE-to-application throughput.
+**UE → gNB → N3/GTP-U → UPF → N6 → Data Network**
+
+The final dataset includes:
+
+- ICMP RTT and packet loss
+- TCP throughput and retransmissions
+- UDP offered/received bitrate, jitter, and loss
+- HTTP response timing
+- Controlled 20 Mbit/s rate limitation
+- N3/GTP-U packet-level evidence
 
 The project demonstrates the importance of separating:
 
@@ -293,13 +345,15 @@ The project demonstrates the importance of separating:
 - performance measurements
 - failure evidence
 
-Container status alone is not sufficient to prove successful 5G user-plane operation.
+Container status alone is not sufficient to prove successful 5G user-plane operation; therefore, UE-to-application traffic and N3/GTP-U packet evidence were used for final verification.
 
 ---
 
 # 9. Failure Diagnosis
 
-The Scenario B failure can be summarized as an evidence chain:
+The Scenario B deployment required troubleshooting before the final successful measurement state.
+
+The initial diagnostic evidence followed this sequence:
 
 **UE registration attempt**
 
@@ -323,24 +377,30 @@ The Scenario B failure can be summarized as an evidence chain:
 
 **MM-DEREGISTERED**
 
-At the core-network side, AMF logs showed SBI connectivity failures toward `172.22.0.35:7777`, including `No route to host`.
+At the core-network side, AMF logs showed SBI connectivity problems toward `172.22.0.35:7777`, including `No route to host`.
 
-After core-network service restoration, NF registration activity was observed and the SBI endpoint changed to `172.22.0.12:7777`.
+After the subscriber/session configuration and required user-plane connectivity were corrected, the final UE logs showed successful authentication, registration, and PDU session establishment.
 
-Despite these corrections, the UE registration/PDU-session procedure did not complete during the final testing stage.
+The final state was verified by:
 
-The failure evidence is retained in the Scenario B log and screenshot directories.
+- UE registration
+- PDU session establishment
+- UE-to-Nginx connectivity
+- UE-to-iperf3 TCP connectivity
+- UE-to-iperf3 UDP connectivity
+- N3/GTP-U packet evidence
+
+The earlier failure logs are retained as evidence of the troubleshooting process.
 
 ---
 
 # 10. Limitations
 
-1. Scenario B UE registration and PDU session establishment were not successfully completed.
-2. N3/GTP-U user-plane traffic from the UE was therefore not observed during the final capture windows.
-3. N4/PFCP traffic was not observed during the final capture window.
-4. Prometheus/Grafana monitoring was not active for the final Scenario B measurements.
-5. Scenario B iperf3 results represent the N6/Data Network path rather than a complete UE-to-application 5G path.
-6. The controlled degradation experiment was performed on the N6 iperf3 path.
+1. The final quantitative Scenario B measurements were completed after correcting the initial registration and user-plane connectivity problems.
+2. N4/PFCP traffic was not collected during the final packet-capture window.
+3. Prometheus/Grafana was not the source of the final quantitative measurements.
+4. Additional suggested experiments such as +50 ms delay, 1% packet loss, and N3-versus-N6 impairment comparison were not included as completed results unless corresponding datasets are present in the repository.
+5. The final controlled degradation experiment used a 20 Mbit/s rate limit on the UPF N6 interface.
 
 These limitations are considered when interpreting the results.
 
@@ -350,19 +410,20 @@ These limitations are considered when interpreting the results.
 
 The project implemented and evaluated two network scenarios.
 
-Scenario A demonstrated a hybrid namespace/Docker network with successful end-to-end application connectivity, packet observation, baseline measurements, and controlled delay, loss, and rate impairments.
+Scenario A demonstrated a hybrid namespace/Docker network with successful end-to-end application connectivity, packet observation, baseline measurements, and controlled delay, packet-loss, and rate impairments.
 
-Scenario B deployed the Open5GS and UERANSIM components, established gNB-to-AMF N2 connectivity, created an N6 Data Network, deployed Nginx and iperf3 services, and performed quantitative N6 baseline and controlled-rate measurements.
+Scenario B deployed Open5GS and UERANSIM, established gNB-to-AMF N2 connectivity, completed UE registration and PDU session establishment, created the N6 Data Network, deployed Nginx and iperf3 services, and performed quantitative measurements through the complete UE user-plane path.
 
-The Scenario B failure investigation identified SBI connectivity problems and documented the remaining UE registration/PDU-session limitation.
+The Scenario B troubleshooting process identified initial registration and connectivity problems, which were subsequently corrected. The final state was verified through UE-to-application traffic and N3/GTP-U packet evidence.
 
-The final results therefore distinguish between verified 5G control-plane deployment, verified N6 application/performance connectivity, and the parts of the complete 5G user plane that could not be demonstrated.
+The final Scenario B dataset provides quantitative evidence for ICMP RTT, TCP throughput and retransmissions, UDP throughput/jitter/loss, HTTP response timing, controlled 20 Mbit/s degradation, and N3/GTP-U encapsulation.
 
-Overall, the project demonstrates a practical workflow for network deployment, verification, packet observation, quantitative measurement, controlled degradation, and evidence-based diagnosis.
+Overall, the project demonstrates the workflow of network deployment, verification, packet observation, quantitative measurement, controlled degradation, troubleshooting, and evidence-based analysis.
 
 ---
 
 # 12. Project Evidence
+
 
 ## Scenario A
 
