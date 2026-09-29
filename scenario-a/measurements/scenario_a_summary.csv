@@ -1,0 +1,11 @@
+metric,condition,value,unit,notes
+ICMP RTT,Baseline,0.63,ms,Recorded baseline result
+ICMP RTT,+50 ms delay,50.433,ms,Recorded degraded result
+Packet loss,1% configured loss,2.0,%,Measured loss
+TCP receiver throughput,Baseline,29200.0,Mbit/s,29.2 Gbit/s
+TCP receiver throughput,20 Mbps limit,19.1,Mbit/s,Measured receiver rate
+UDP offered bitrate,Baseline,10.0,Mbit/s,Controlled offered rate
+UDP received bitrate,Baseline,10.0,Mbit/s,Measured received rate
+UDP jitter,Baseline,0.134,ms,Measured jitter
+UDP loss,Baseline,0.0,%,Measured loss
+HTTP response time,Baseline,9.616,ms,Measured total response time
