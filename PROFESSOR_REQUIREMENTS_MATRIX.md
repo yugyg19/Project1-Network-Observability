@@ -16,5 +16,5 @@
 | Comparative graphs/bar charts | `scenario-a/analysis/`, `scenario-b/analysis/` |
 | Packet-level N3 evidence | `scenario-b/packet-captures/n3-gtpu.pcap` + evidence markdown |
 | Python/Matplotlib analysis | Analysis figures and source datasets |
-| Failure diagnosis | Existing deployment/report material; final report should describe UE registration/N6 troubleshooting |
+| Failure diagnosis | Initial UE registration and connectivity troubleshooting documented in the final technical report |
 | Additional suggested Scenario B experiments | Not claimed unless actually measured: +50 ms delay, 1% loss, N3-vs-N6 comparison, Prometheus/Grafana correlation |
