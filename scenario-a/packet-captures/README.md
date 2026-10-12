@@ -8,4 +8,3 @@ The original packet-capture commands and results are documented in the Scenario 
 
 The screenshot evidence covers ICMP, HTTP, and UDP traffic observation.
 
-The original `.pcap` files are not currently included in this repository, so no reconstructed packet captures are presented as original files.
