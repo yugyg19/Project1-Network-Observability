@@ -304,8 +304,6 @@ The analysis generated:
 
 `scenario-b/analysis/throughput_comparison.png`
 
-The graph uses a logarithmic throughput axis so that the baseline and degraded measurements can both be visualized clearly.
-
 ---
 
 # 7. Monitoring
@@ -457,8 +455,6 @@ Important Scenario B evidence includes:
 - CSV dataset
 - Python analysis script
 - throughput comparison graph
-
-All implementation materials and supporting evidence should be included in the GitHub repository.
 
 ---
 
