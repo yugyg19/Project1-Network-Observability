@@ -18,7 +18,5 @@ configured bottleneck. The UDP result shows that, under the recorded baseline co
 The packet-loss result is reported as measured rather than assumed: the configured condition was 1%,
 while the recorded measurement was 2%.
 
-## Important presentation rule
-
-Do not treat the graphs as independent measurements. Each graph is a visualization of the recorded
+## Each graph is a visualization of the recorded
 values in `scenario-a/measurements/scenario_a_summary.csv`.
